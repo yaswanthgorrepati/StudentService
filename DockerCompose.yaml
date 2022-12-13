@@ -1,0 +1,22 @@
+version: "2.1"
+services:
+  mysql-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD:root
+      - MYSQL_DATABASE:studentdb
+      - MYSQL_USER:studentdb_user
+      - MYSQL_PASSWORD:secretdbpass
+    ports:
+      - 3308:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+  spring_app:
+    image: student-app:1.0
+    ports:
+    - 8080:8080
+    depends_on:
+      - mysql-db
+volumes:
+  mysql-data:
+    driver: local

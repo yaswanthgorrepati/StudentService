@@ -2,7 +2,7 @@
 
 #API
 HealthAPI:<br />
-http://localhost:8080/student/healthCheck
+http://localhost:8080/student/healthCheck<br />
 Response:
     {
         "health": "Healthy",
@@ -21,7 +21,9 @@ Docker Commands:<br />
 9.docker network create network_name<br />
 10.docker network connect network_name container_name<br />
 11.docker run --network=network_name image_name<br />
-12.docker run --name spring_app -d --net=spring_network -p 8080:8080 student-app<br /> 
+12.docker run --name spring_app -d --net=spring_network -p 8080:8080 student-app:1.0<br /> 
+13.docker-compose -f DockerCompose.yaml up -d<br />
+14.docker-compose -f DockerCompose.yaml down<br />
 
 <br />
 /**
