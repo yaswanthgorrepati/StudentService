@@ -9,21 +9,21 @@ Response:
         "appVersion": "1.0"
     }
 <br />
-Docker Commands:<br />
-1.docker pull mysql<br />
-2.docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=studentdb -e MYSQL_USER=studentdb_user -e MYSQL_PASSWORD=secretdbpass -p 3308:3306 -d mysql<br />
-3.docker logs mysql-db<br />
-4.docker exec -it mysql-db bash<br />
-5.docker start mysql-db<br />
-6.docker build -t student-app:1.0 .<br />
-7.mvn clean package -DskipTests<br />
-8.docker inspect container_name -f "{{json .NetworkSettings.Networks }}"<br />
-9.docker network create network_name<br />
-10.docker network connect network_name container_name<br />
-11.docker run --network=network_name image_name<br />
-12.docker run --name spring_app -d --net=spring_network -p 8080:8080 student-app:1.0<br /> 
-13.docker-compose -f DockerCompose.yaml up -d<br />
-14.docker-compose -f DockerCompose.yaml down<br />
+## Docker Commands:
+1. docker pull mysql
+2. docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=studentdb -e MYSQL_USER=studentdb_user -e MYSQL_PASSWORD=secretdbpass -p 3308:3306 -d mysql
+3. docker logs mysql-db
+4. docker exec -it mysql-db bash
+5. docker start mysql-db
+6. docker build -t student-app:1.0 .
+7. mvn clean package -DskipTests
+8. docker inspect container_name -f "{{json .NetworkSettings.Networks }}"
+9. docker network create network_name
+10. docker network connect network_name container_name
+11. docker run --network=network_name image_name
+12. docker run --name spring_app -d --net=spring_network -p 8080:8080 student-app:1.0 
+13. docker-compose -f DockerCompose.yaml up -d
+14. docker-compose -f DockerCompose.yaml down
 
 <br />
 /**
