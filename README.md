@@ -8,6 +8,8 @@ Response:
         "health": "Healthy",
         "appVersion": "1.0"
     }
+
+Postman Collection: [API end points](./StudentServiceWithDocker.postman_collection.json)
 <br />
 ## Docker Commands:
 1. docker pull mysql
